@@ -1,0 +1,3 @@
+使用ClassPathXmlApplicationContext来进行实例化 ApplicationContext
+
+另外一种方法是 web 容器来实例化，这里不做讨论
