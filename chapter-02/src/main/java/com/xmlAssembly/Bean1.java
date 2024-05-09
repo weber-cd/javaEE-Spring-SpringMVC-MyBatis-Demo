@@ -1,4 +1,4 @@
-package com.instantiation;
+package com.xmlAssembly;
 
 public class Bean1 {
     Bean1() {

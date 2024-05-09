@@ -1,4 +1,4 @@
-package com.instantiation;
+package com.xmlAssembly;
 
 public class BeansFactoryStatic {
     public static Bean1 createBean1(){

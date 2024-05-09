@@ -1,4 +1,4 @@
-package com.instantiation;
+package com.xmlAssembly;
 
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;

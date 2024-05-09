@@ -1,4 +1,4 @@
-package com.instantiation;
+package com.xmlAssembly;
 
 public class BeansFactoryMethod {
     public BeansFactoryMethod(){

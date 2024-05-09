@@ -2,6 +2,6 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="beansFactoryMethod" class="com.instantiation.BeansFactoryMethod"></bean>
-    <bean id="bean1" factory-bean="beansFactoryMethod" factory-method="createBean1"></bean>
+    <bean id="beansFactoryMethod" class="com.xmlAssembly.BeansFactoryMethod" />
+    <bean id="bean1" factory-bean="beansFactoryMethod" factory-method="createBean1" />
 </beans>
