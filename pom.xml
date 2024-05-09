@@ -9,6 +9,7 @@
   <url>http://maven.apache.org</url>
   <modules>
     <module>chapter-01</module>
+    <module>chapter-02</module>
   </modules>
   <dependencies>
     <dependency>
