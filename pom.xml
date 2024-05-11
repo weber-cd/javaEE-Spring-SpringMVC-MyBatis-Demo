@@ -13,6 +13,7 @@
       <module>chapter-03-aop</module>
       <module>chapter-04-jdbc</module>
       <module>chapter-05-transaction</module>
+    <module>chapter-06-mybatis-start</module>
   </modules>
   <dependencies>
     <dependency>
@@ -42,4 +43,24 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/*.properties</include>
+          <include>**/*.xml</include>
+        </includes>
+        <filtering>true</filtering>
+      </resource>
+      <resource>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**/*.properties</include>
+          <include>**/*.xml</include>
+        </includes>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+  </build>
 </project>
