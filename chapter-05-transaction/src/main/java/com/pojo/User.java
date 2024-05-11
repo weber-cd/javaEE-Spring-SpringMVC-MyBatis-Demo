@@ -18,10 +18,6 @@ public class User {
         this.pwd = pwd;
     }
 
-    public void setDeposit(Number deposit) {
-        this.deposit = deposit;
-    }
-
     public int getId() {
         return id;
     }
