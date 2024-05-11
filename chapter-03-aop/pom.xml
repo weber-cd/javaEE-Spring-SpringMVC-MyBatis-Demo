@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>com.aop</groupId>
-    <artifactId>chapter-03</artifactId>
+    <artifactId>chapter-03-aop</artifactId>
 
     <dependencies>
         <dependency>
