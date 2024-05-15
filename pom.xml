@@ -14,6 +14,7 @@
       <module>chapter-04-jdbc</module>
       <module>chapter-05-transaction</module>
     <module>chapter-06-mybatis-start</module>
+    <module>chapter-07-mybatis-core</module>
   </modules>
   <dependencies>
     <dependency>
