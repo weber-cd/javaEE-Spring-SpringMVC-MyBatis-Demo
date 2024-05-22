@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.condition.mapper.CustomerMapper">
+    <select id="findAllCustomers" resultType="com.mybatis.condition.po.Customer">
+        select * from customer;
+    </select>
+    <select id="findCustomerByCondition" resultType="com.mybatis.condition.po.Customer" parameterType="com.mybatis.condition.po.Customer">
+        select * from customer where 1= 1
+        <if test="username != null and username != ''">
+            and username like concat('%', #{username}, '%')
+        </if>
+        <if test="jobs != null and jobs !=''">
+            and jobs = #{jobs}
+        </if>
+    </select>
+    <select id="findCustomerByNameOrJob" resultType="com.mybatis.condition.po.Customer" parameterType="com.mybatis.condition.po.Customer">
+        select * from customer where 1 = 1
+        <choose>
+            <when test="username != null and username != ''">
+                and username like concat('%',#{username},'%')
+            </when>
+            <when test="jobs != null and jobs != ''">
+                and jobs = #{jobs}
+            </when>
+            <otherwise>
+                and phone is not null
+            </otherwise>
+        </choose>
+    </select>
+</mapper>
