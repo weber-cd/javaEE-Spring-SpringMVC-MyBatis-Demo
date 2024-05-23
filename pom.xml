@@ -16,6 +16,7 @@
     <module>chapter-06-mybatis-start</module>
     <module>chapter-07-mybatis-core</module>
     <module>chapter-08-mybtais-condition</module>
+      <module>chapter-09-mybatis-association</module>
   </modules>
   <dependencies>
     <dependency>
