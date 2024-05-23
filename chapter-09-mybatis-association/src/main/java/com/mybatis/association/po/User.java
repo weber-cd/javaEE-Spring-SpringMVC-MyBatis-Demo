@@ -1,7 +1,10 @@
 package com.mybatis.association.po;
 
 
+//import org.springframework.core.annotation.Order;
+
 import java.math.BigDecimal;
+import java.util.List;
 
 public class User {
     private Integer id;
@@ -9,6 +12,7 @@ public class User {
     private String pwd;
     private BigDecimal deposit;
     private Address address;
+    private List<OrderInfo> orderInfoList;
 
     public Integer getId() {
         return id;
@@ -30,6 +34,11 @@ public class User {
         return address;
     }
 
+    public List<OrderInfo> getOrderList() {
+        return orderInfoList;
+    }
+
+
     public void setId(Integer id) {
         this.id = id;
     }
@@ -50,6 +59,10 @@ public class User {
         this.address = address;
     }
 
+    public void setOrderList(List<OrderInfo> orderInfoList) {
+        this.orderInfoList = orderInfoList;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -58,6 +71,7 @@ public class User {
                 ", pwd='" + pwd + '\'' +
                 ", deposit=" + deposit +
                 ", address=" + address +
+                ", orderList=" + orderInfoList +
                 '}';
     }
 }

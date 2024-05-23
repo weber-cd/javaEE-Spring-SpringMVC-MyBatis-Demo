@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.mybatis.association.mapper.UserMapper">
-    <resultMap id="userResultMap" type="com.mybatis.association.po.User">
+    <resultMap id="queryUserWithAddress" type="com.mybatis.association.po.User">
         <id property="id" column="id" />
         <result property="name" column="name"/>
         <association property="address" javaType="com.mybatis.association.po.Address">
@@ -12,8 +12,7 @@
             <result property="street" column="street" />
         </association>
     </resultMap>
-    <select id="queryUserWithAddress" resultMap="userResultMap">
-<!--        select u. from user u where id = #{id}-->
+    <select id="queryUserWithAddress" resultMap="queryUserWithAddress">
         select
             u.id,
             u.name,
@@ -22,5 +21,23 @@
         from user u
             left join address a on u.id = a.user_id
         where u.id = #{id}
+    </select>
+
+    <resultMap type="com.mybatis.association.po.User" id="UserWithOrdersResult">
+        <id property="id" column="id"/>
+        <collection property="orderList" ofType="com.mybatis.association.po.OrderInfo">
+            <id property="id" column="order_id"/>
+            <id property="userId" column="order_user_id"/>
+            <result property="number" column="number" />
+        </collection>
+    </resultMap>
+    <select id="queryUserWithOrders" resultMap="UserWithOrdersResult">
+        select
+            u.*,
+            o.user_id as order_user_id,
+            o.id as order_id,
+            o.number
+        from user u, `order` o
+        where u.id=#{id} and u.id = o.user_id
     </select>
 </mapper>
