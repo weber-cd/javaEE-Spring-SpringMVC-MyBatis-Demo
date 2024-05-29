@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--这里的 namespace 我觉得与 CustomerDao接口名字一致会比较舒服，我为了说明 namespace 可以自定义，这里引了一个新的名字-->
+<mapper namespace="CustomerNameSpace">
+    <select id="findCustomerById" parameterType="integer" resultType="com.mybatis.spring.po.Customer">
+        select *
+        from customer
+        where id = #{id}
+  </select>
+</mapper>
