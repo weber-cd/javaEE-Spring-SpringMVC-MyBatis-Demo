@@ -18,6 +18,7 @@
     <module>chapter-08-mybtais-condition</module>
       <module>chapter-09-mybatis-association</module>
       <module>chapter-10-mybatis-spring</module>
+      <module>chapter-11-spring-mvc-start</module>
   </modules>
   <dependencies>
     <dependency>
