@@ -19,6 +19,7 @@
       <module>chapter-09-mybatis-association</module>
       <module>chapter-10-mybatis-spring</module>
       <module>chapter-11-spring-mvc-start</module>
+    <module>chapter-12-spring-mvc-annotation</module>
   </modules>
   <dependencies>
     <dependency>
