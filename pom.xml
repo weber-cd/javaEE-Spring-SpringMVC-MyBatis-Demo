@@ -20,6 +20,7 @@
       <module>chapter-10-mybatis-spring</module>
       <module>chapter-11-spring-mvc-start</module>
     <module>chapter-12-spring-mvc-annotation</module>
+      <module>chapter-13-spring-mvc-databind</module>
   </modules>
   <dependencies>
     <dependency>
