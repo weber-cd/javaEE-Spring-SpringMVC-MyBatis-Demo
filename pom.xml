@@ -21,6 +21,7 @@
       <module>chapter-11-spring-mvc-start</module>
     <module>chapter-12-spring-mvc-annotation</module>
       <module>chapter-13-spring-mvc-databind</module>
+      <module>chapter-14-spring-mvc-json-restful</module>
   </modules>
   <dependencies>
     <dependency>
