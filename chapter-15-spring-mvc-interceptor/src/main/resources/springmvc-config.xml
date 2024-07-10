@@ -20,7 +20,13 @@
         <property name="suffix" value=".jsp" />
     </bean>
     <!-- 配置拦截器 -->
-    <mvc:interceptors>
+<!--    <mvc:interceptors>
         <bean class="com.springmvc.interceptor.CustomInterceptor"/>
+    </mvc:interceptors>-->
+    <mvc:interceptors>
+        <bean class="com.springmvc.interceptor.Interceptor1"/>
+    </mvc:interceptors>
+    <mvc:interceptors>
+        <bean class="com.springmvc.interceptor.Interceptor2"/>
     </mvc:interceptors>
 </beans>
