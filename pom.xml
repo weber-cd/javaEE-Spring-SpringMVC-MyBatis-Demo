@@ -10,9 +10,9 @@
   <modules>
     <module>chapter-01</module>
     <module>chapter-02</module>
-      <module>chapter-03-aop</module>
-      <module>chapter-04-jdbc</module>
-      <module>chapter-05-transaction</module>
+    <module>chapter-03-aop</module>
+    <module>chapter-04-jdbc</module>
+    <module>chapter-05-transaction</module>
     <module>chapter-06-mybatis-start</module>
     <module>chapter-07-mybatis-core</module>
     <module>chapter-08-mybtais-condition</module>
@@ -22,6 +22,7 @@
     <module>chapter-12-spring-mvc-annotation</module>
       <module>chapter-13-spring-mvc-databind</module>
       <module>chapter-14-spring-mvc-json-restful</module>
+      <module>chapter-15-spring-mvc-interceptor</module>
   </modules>
   <dependencies>
     <dependency>
