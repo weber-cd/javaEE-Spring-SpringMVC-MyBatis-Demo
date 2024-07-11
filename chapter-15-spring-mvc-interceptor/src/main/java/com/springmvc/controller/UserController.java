@@ -1,12 +1,14 @@
 package com.springmvc.controller;
 
 import com.springmvc.po.User;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpSession;
 
+@Controller
 public class UserController {
     /**
      * 向用户登陆页面跳转
@@ -42,5 +44,13 @@ public class UserController {
         session.invalidate();
         // 重定向到登陆页面
         return "redirect:login";
+    }
+
+    /**
+     * 向主页跳转
+     * */
+    @RequestMapping(value = "/main", method = RequestMethod.GET)
+    public String toMain(){
+        return "main";
     }
 }
