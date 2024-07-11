@@ -12,6 +12,8 @@
 
     <!-- 定义组件扫描器，指定需要扫描的包 -->
     <context:component-scan base-package="com.springmvc.controller" />
+    <!-- 配置注解驱动 -->
+    <mvc:annotation-driven />
     <!-- 定义视图解析器 -->
     <bean id="viewResolvers" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <!-- 设置前缀 -->
@@ -19,18 +21,10 @@
         <!-- 设置后缀 -->
         <property name="suffix" value=".jsp" />
     </bean>
-    <!-- 配置拦截器 -->
-<!--    <mvc:interceptors>
-        <bean class="com.springmvc.interceptor.CustomInterceptor"/>
-    </mvc:interceptors>-->
-    <mvc:interceptors>
-        <bean class="com.springmvc.interceptor.Interceptor1"/>
-    </mvc:interceptors>
-    <mvc:interceptors>
-        <bean class="com.springmvc.interceptor.Interceptor2"/>
-        <mvc:interceptor>
-            <mvc:mapping path="/**" />
-            <bean class="com.springmvc.interceptor.LoginInterceptor"/>
-        </mvc:interceptor>
-    </mvc:interceptors>
+
+    <!-- 配置文件上传解析器MultipartResolver -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- 设置请求编码格式 -->
+        <property name="defaultEncoding" value="UTF-8" />
+    </bean>
 </beans>
