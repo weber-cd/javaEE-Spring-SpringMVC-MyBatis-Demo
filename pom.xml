@@ -24,6 +24,7 @@
       <module>chapter-14-spring-mvc-json-restful</module>
       <module>chapter-15-spring-mvc-interceptor</module>
       <module>chapter-16-spring-mvc-file</module>
+      <module>chapter-17-ssm</module>
   </modules>
   <dependencies>
     <dependency>
