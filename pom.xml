@@ -25,6 +25,7 @@
       <module>chapter-15-spring-mvc-interceptor</module>
       <module>chapter-16-spring-mvc-file</module>
       <module>chapter-17-ssm</module>
+      <module>chapter-18-boot</module>
   </modules>
   <dependencies>
     <dependency>
