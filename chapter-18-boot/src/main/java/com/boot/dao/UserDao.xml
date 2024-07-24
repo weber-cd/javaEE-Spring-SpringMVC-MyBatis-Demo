@@ -4,7 +4,8 @@
 <mapper namespace="com.boot.dao.UserDao">
     <!-- 查询用户 -->
     <select id="findUser" parameterType="string" resultType="com.boot.po.User">
-        select * from sys_user where user_code = #{user_code}
+        select * from sys_user
+                 where user_code = #{usercode}
         and user_password=#{password}
         and user_state='1'
     </select>

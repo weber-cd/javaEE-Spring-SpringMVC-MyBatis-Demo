@@ -71,9 +71,9 @@
         <property name="configLocation" value="classpath:mybatis-config.xml" />
     </bean>
 
-    <!-- 接口开发，扫描com.itheima.core.dao包，写在此包下的接口即可被扫描到 -->
+    <!-- 接口开发，扫描com.boot.dao包，写在此包下的接口即可被扫描到 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.itheima.core.dao" />
+        <property name="basePackage" value="com.boot.dao" />
     </bean>
 
     <!-- 配置扫描@Service注解 -->

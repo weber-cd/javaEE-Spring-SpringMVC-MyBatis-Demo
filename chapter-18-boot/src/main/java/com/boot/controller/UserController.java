@@ -30,4 +30,12 @@ public class UserController {
         // 返回登录页面
         return "login";
     };
+
+    /*
+    * 模拟其他类中跳转到客户管理页面的方法
+    *  */
+    @RequestMapping(value = "/toCustomer.action")
+    public String toCustomer(){
+        return "customer";
+    }
 }
