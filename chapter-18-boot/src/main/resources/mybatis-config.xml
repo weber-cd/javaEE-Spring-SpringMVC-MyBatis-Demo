@@ -3,5 +3,7 @@
 <configuration>
     <mappers>
         <mapper resource="com/boot/dao/UserDao.xml"/>
+        <mapper resource="com/boot/dao/CustomerDao.xml"/>
+        <mapper resource="com/boot/dao/BaseDictDao.xml"/>
     </mappers>
 </configuration>

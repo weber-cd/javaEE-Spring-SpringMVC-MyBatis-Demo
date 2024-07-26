@@ -38,4 +38,20 @@ public class UserController {
     public String toCustomer(){
         return "customer";
     }
+    /*
+    * 退出登录
+    *  */
+    @RequestMapping(value="/logout.action")
+    public String logout(HttpSession session){
+        // 清除session
+        session.invalidate();
+        return "redirect:login.action";
+    }
+    /*
+    * 想用户登录页面跳转
+    *  */
+    @RequestMapping(value = "/login.action", method = RequestMethod.GET)
+    public String toLogin(){
+        return "login";
+    }
 }
