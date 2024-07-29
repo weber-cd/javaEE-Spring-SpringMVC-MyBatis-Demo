@@ -92,4 +92,40 @@ public class CustomerController {
             return "FAIL";
         }
     }
+    /*
+    * 通过id查询客户信息
+    *  */
+    @RequestMapping("/customer/getCustomerById.action")
+    @ResponseBody
+    public Customer getCustomerById(Integer id){
+        Customer customer = customerService.getCustomerById(id);
+        return customer;
+    }
+    /*
+    * 更新客户
+    *  */
+    @RequestMapping("/customer/update.action")
+    @ResponseBody
+    public  String customerUpdate(Customer customer){
+        int rows = customerService.updateCustomer(customer);
+        if(rows > 0){
+            return "OK";
+        }else {
+            return "FAIL";
+        }
+    }
+    /*
+    * 删除客户
+    *  */
+    @RequestMapping("/customer/delete.action")
+    @ResponseBody
+    public String customerDelete(Integer id){
+        int rows = customerService.deleteCustomer(id);
+        if(rows > 0){
+            return "OK";
+        }else{
+            return "FAIL";
+        }
+    }
 }
+

@@ -14,3 +14,5 @@ public User findUser(@Param("usercode") String usercode, @Param("password") Stri
 ```
 
 * commons.tld文件有何作用？
+  * 这是一个前端组件，只不过是传统的jsp中的写法
+* 数据库连接时，需要指定&characterEncoding=UTF-8。否则保存中文时，会乱码。
